@@ -4,12 +4,12 @@ import EmployeeCard from './assets/components/EmployeeCard'
 
 const sampleEmployee = {
   name: {
-    first: "Charlie",
-    last: "Thompson",
+    first: "Penny",
+    last: "Ramirez",
   },
-  email: "charlie.thompson@example.com",
+  email: "penny.ramirez@example.com",
   picture: {
-    medium: "https://randomuser.me/api/portraits/med/men/40.jpg",
+    medium: "https://randomuser.me/api/portraits/women/81.jpg",
   },
 };
 
@@ -17,7 +17,7 @@ function App() {
   const [employee, setEmployee] = useState(sampleEmployee);
 
   const getEmployee = () => {
-    fetch("https://randomuser.me/api?nat=en")
+    fetch("http://localhost:3310/api/employees")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
